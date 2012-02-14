@@ -86,9 +86,8 @@ class Module
      */
     protected function sendFile($filename)
     {
-        $finfo = finfo_open(FILEINFO_MIME);
-        $mimeType = finfo_file($finfo, $filename);
-        finfo_close($finfo);
+        $finfo    = new finfo(FILEINFO_MIME);
+        $mimeType = $finfo->file($filename);
 
         header('Content-Type: ' . $mimeType);
         readfile($filename);
