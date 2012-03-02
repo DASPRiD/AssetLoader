@@ -2,7 +2,8 @@
 namespace AssetLoader;
 
 use Zend\Module\Manager,
-    Zend\EventManager\StaticEventManager;
+    Zend\EventManager\StaticEventManager,
+    \finfo;
 
 /**
  * Module for loading assets in development.
