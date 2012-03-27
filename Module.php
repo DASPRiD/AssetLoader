@@ -86,7 +86,7 @@ class Module
      */
     protected function sendFile($filename)
     {
-        $finfo    = new finfo(FILEINFO_MIME);
+        $finfo    = new \finfo(FILEINFO_MIME);
         $mimeType = $finfo->file($filename);
 
         header('Content-Type: ' . $mimeType);
